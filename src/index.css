@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Custom styles for the connect button */
+.connect-wrapper :where(button) {
+    @apply relative px-5 py-2.5 rounded-xl bg-[#1a1b1f]/50 text-white 
+           border border-[#2a2b2f] hover:border-[#ff3366]/50
+           transition-all duration-300 font-medium;
+  }
+  
+  /* Optional: Add this if you want a cool hover effect on the connect button */
+  .connect-wrapper :where(button):after {
+    content: '';
+    @apply absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300
+           bg-gradient-to-r from-[#ff3366]/10 to-[#ff6699]/10;
+  }
+  
+  .connect-wrapper :where(button):hover:after {
+    @apply opacity-100;
+  }
