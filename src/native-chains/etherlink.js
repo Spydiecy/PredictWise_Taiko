@@ -4,7 +4,7 @@ import { defineChain } from "thirdweb/chains";
  * @chain
  */
 export const etherlink_testnet = /*@__PURE__*/ defineChain({
-  id: 1001,
+  id: 167009,
   name: "Taiko Testnet",
   rpc: "https://rpc.hekla.taiko.xyz/",
   nativeCurrency: { name: "Taiko", symbol: "ETH", decimals: 18 },
