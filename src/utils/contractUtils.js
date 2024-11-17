@@ -1,4 +1,4 @@
-const contractAddress = "0xF887B4D3b17C12C86cc917cF72fb8881f866a847";
+const contractAddress = "0xCa36dD890F987EDcE1D6D7C74Fb9df627c216BF6";
 const contractABI = [
 	{
 		"inputs": [
@@ -520,7 +520,7 @@ const contractABI = [
 // src/utils/contractUtils.js
 import { ethers } from 'ethers';
 
-const rpcUrl = "https://kaia-kairos.blockpi.network/v1/rpc/public"; // Etherlink testnet RPC URL
+const rpcUrl = "https://rpc.hekla.taiko.xyz/"; // Etherlink testnet RPC URL
 
 let provider;
 let contract;

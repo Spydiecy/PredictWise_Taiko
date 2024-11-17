@@ -6,12 +6,12 @@ import { defineChain } from "thirdweb/chains";
 export const etherlink_testnet = /*@__PURE__*/ defineChain({
   id: 1001,
   name: "Taiko Testnet",
-  rpc: "https://kaia-kairos.blockpi.network/v1/rpc/public",
-  nativeCurrency: { name: "Taiko", symbol: "KAIA", decimals: 18 },
+  rpc: "https://rpc.hekla.taiko.xyz/",
+  nativeCurrency: { name: "Taiko", symbol: "ETH", decimals: 18 },
   blockExplorers: [
     {
       name: "Taiko Testnet explorer",
-      url: "https://kairos.kaiascope.com/",
+      url: "hekla.taikoscan.network",
     },
   ],
   testnet: true,

@@ -181,7 +181,7 @@ const PredictionBoard = () => {
                     />
                     <StatsCard
                         title="Prize Pool"
-                        value={`${roundInfo?.totalPrizePool || '0.00'} KAIA`}
+                        value={`${roundInfo?.totalPrizePool || '0.00'} ETH`}
                         icon={Trophy}
                         trend={5.2}
                     />

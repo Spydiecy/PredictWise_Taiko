@@ -22,7 +22,7 @@ const Header = () => {
             </div>
           </div>
           <div className="flex flex-col">
-            <h1 className="text-white text-xl font-bold tracking-wide">Predictions</h1>
+            <h1 className="text-white text-xl font-bold tracking-wide">PredictWise</h1>
             <span className="text-[#ff3366]/60 text-xs tracking-wider">BETA</span>
           </div>
         </div>
