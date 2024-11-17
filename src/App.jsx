@@ -26,7 +26,7 @@ function App() {
             <nav className="flex items-center space-x-2 text-sm">
               <span className="text-[#ff3366]">Home</span>
               <span className="text-gray-600">/</span>
-              <span className="text-gray-400">Predictions</span>
+              <span className="text-gray-400">PredictWise</span>
             </nav>
           </div>
 
