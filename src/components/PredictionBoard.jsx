@@ -143,7 +143,7 @@ const PredictionBoard = () => {
                         Market Prediction Board
                     </h1>
                     <p className="text-gray-400">
-                        Predict SOL's price movement and earn rewards
+                        Predict Tezos's price movement and earn rewards
                     </p>
                 </div>
 
