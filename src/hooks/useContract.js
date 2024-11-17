@@ -10,7 +10,7 @@ const useContract = () => {
                 if (!privateKey) {
                     throw new Error("Private key not found in environment variables");
                 }
-                const provider = new ethers.JsonRpcProvider('https://node.ghostnet.etherlink.com');
+                const provider = new ethers.JsonRpcProvider('https://kaia-kairos.blockpi.network/v1/rpc/public');
                 const signer = new ethers.Wallet(privateKey, provider);
                 const initializedContract = getContract().connect(signer);
                 setContract(initializedContract);

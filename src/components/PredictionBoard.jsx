@@ -6,6 +6,7 @@ import PredictionCard from './PredictionCard';
 import useTokenPrice from '../hooks/useTokenPrice';
 import useRoundData from '../hooks/useRoundData';
 import { TrendingUp, Clock, Trophy, ChevronUp, ChevronDown } from 'lucide-react';
+import { getContract } from '../utils/contractUtils';
 
 // Live Price Chart Component
 const LivePriceChart = ({ currentPrice }) => {
@@ -127,12 +128,30 @@ const PredictionBoard = () => {
     const tokenPrice = useTokenPrice();
     const [currentPrice, setCurrentPrice] = useState(null);
     const { roundInfo } = useRoundData();
+    const [currentEpoch, setCurrentEpoch] = useState(null);
 
     useEffect(() => {
         if (tokenPrice) {
             setCurrentPrice(tokenPrice);
         }
     }, [tokenPrice]);
+
+    useEffect(() => {
+      const getCurrentEpoch = async () => {
+          try {
+              const contract = getContract();
+              const epoch = await contract.currentEpoch();
+              setCurrentEpoch(Number(epoch));
+          } catch (error) {
+              console.error("Error fetching current epoch:", error);
+          }
+      };
+
+      getCurrentEpoch();
+      // Update every minute
+      const intervalId = setInterval(getCurrentEpoch, 60000);
+      return () => clearInterval(intervalId);
+    }, []);
 
     return (
         <div className="min-h-screen bg-[#0a0b0f] p-6">
@@ -157,12 +176,12 @@ const PredictionBoard = () => {
                     />
                     <StatsCard
                         title="Round"
-                        value={`#${roundInfo?.currentEpoch || '---'}`}
+                        value={`#${currentEpoch || '---'}`}
                         icon={Clock}
                     />
                     <StatsCard
                         title="Prize Pool"
-                        value={`${roundInfo?.totalPrizePool || '0.00'} ETH`}
+                        value={`${roundInfo?.totalPrizePool || '0.00'} KAIA`}
                         icon={Trophy}
                         trend={5.2}
                     />

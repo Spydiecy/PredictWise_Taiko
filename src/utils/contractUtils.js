@@ -520,7 +520,7 @@ const contractABI = [
 // src/utils/contractUtils.js
 import { ethers } from 'ethers';
 
-const rpcUrl = "https://node.ghostnet.etherlink.com"; // Etherlink testnet RPC URL
+const rpcUrl = "https://kaia-kairos.blockpi.network/v1/rpc/public"; // Etherlink testnet RPC URL
 
 let provider;
 let contract;

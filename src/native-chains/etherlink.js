@@ -4,14 +4,14 @@ import { defineChain } from "thirdweb/chains";
  * @chain
  */
 export const etherlink_testnet = /*@__PURE__*/ defineChain({
-  id: 128123,
-  name: "Etherlink Testnet",
-  rpc: "https://node.ghostnet.etherlink.com",
-  nativeCurrency: { name: "Ghostnet", symbol: "XTZ", decimals: 18 },
+  id: 1001,
+  name: "Taiko Testnet",
+  rpc: "https://kaia-kairos.blockpi.network/v1/rpc/public",
+  nativeCurrency: { name: "Taiko", symbol: "KAIA", decimals: 18 },
   blockExplorers: [
     {
-      name: "Etherlink Testnet explorer",
-      url: "https://testnet.explorer.etherlink.com/",
+      name: "Taiko Testnet explorer",
+      url: "https://kairos.kaiascope.com/",
     },
   ],
   testnet: true,
