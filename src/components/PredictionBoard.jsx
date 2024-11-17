@@ -18,7 +18,7 @@ const LivePriceChart = ({ currentPrice }) => {
         const timeStr = now.toLocaleTimeString('en-US', { 
           hour12: false,
           hour: '2-digit',
-          minute: '2-digit'
+          minute: '2-digit',
         });
 
         const newHistory = [...prev, {
@@ -38,7 +38,7 @@ const LivePriceChart = ({ currentPrice }) => {
         <div className="bg-[#1a1b1f] border border-[#2a2b2f] rounded-lg p-2 shadow-lg">
           <p className="text-gray-400 text-xs">{payload[0].payload.time}</p>
           <p className="text-white font-medium">
-            ${payload[0].value.toFixed(2)}
+            ${payload[0].value.toFixed(4)}
           </p>
         </div>
       );
@@ -68,7 +68,7 @@ const LivePriceChart = ({ currentPrice }) => {
               stroke="#4B5563"
               tick={{ fill: '#4B5563', fontSize: 12 }}
               width={60}
-              tickFormatter={value => value.toFixed(2)}
+              tickFormatter={value => value.toFixed(4)}
             />
             <Tooltip content={<CustomTooltip />} />
             {priceHistory.map((entry, index) => {
@@ -151,7 +151,7 @@ const PredictionBoard = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <StatsCard
                         title="Current Price"
-                        value={`$${currentPrice ? currentPrice.toFixed(2) : '---'}`}
+                        value={`$${currentPrice ? currentPrice.toFixed(4) : '---'}`}
                         icon={TrendingUp}
                         trend={2.5}
                     />
