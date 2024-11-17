@@ -46,7 +46,7 @@ function App() {
                 {/* Network status */}
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="text-gray-400 text-sm">Mainnet</span>
+                  <span className="text-gray-400 text-sm">testnet</span>
                 </div>
 
                 {/* Links */}
@@ -71,7 +71,7 @@ function App() {
       <div className="fixed bottom-4 right-4 z-50">
         <div className="bg-[#1a1b1f] border border-[#2a2b2f] rounded-lg px-4 py-2 flex items-center gap-3 shadow-xl">
           <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          <span className="text-gray-400 text-sm">Connected to Etherlink</span>
+          <span className="text-gray-400 text-sm">Connected to Taiko</span>
         </div>
       </div>
     </div>

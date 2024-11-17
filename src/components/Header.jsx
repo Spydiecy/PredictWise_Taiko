@@ -32,7 +32,7 @@ const Header = () => {
           {/* Network Status Indicator */}
           <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#1a1b1f]/50 border border-[#2a2b2f]">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-gray-400 text-sm">Mainnet</span>
+            <span className="text-gray-400 text-sm">testnet</span>
           </div>
 
           {/* Settings button */}
